@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -26,7 +26,6 @@ jobs:
       uses: mayurrawte/github-angular-actions@latest
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
     - run: npm install       
     - run: echo Build started
     - run: ng build
