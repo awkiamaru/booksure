@@ -1,6 +1,11 @@
-# SearchBooks
+![SEARCH BOOKS](https://raw.githubusercontent.com/LuisFrag/search-books/master/src/assets/logo_transparent.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+<h4 align="center">Wellcome to Search books, find books by author name, subject or book title.</h4>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT) 
+![Book gif](src/assets/git_readme.gif)
+
+
 
 ## Development server
 
