@@ -31,7 +31,7 @@ body {
   background-color: rgb(65, 99, 192);
 }
 
-body {
+.body-style {
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
