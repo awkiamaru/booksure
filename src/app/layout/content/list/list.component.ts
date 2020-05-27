@@ -22,7 +22,6 @@ export class ListComponent implements OnInit {
       this.dataBooks = books;
 
       books.items.forEach((book: BookSearchInfos) => {
-        console.log(book.volumeInfo);
         this.books.push(book.volumeInfo);
       });
     });
