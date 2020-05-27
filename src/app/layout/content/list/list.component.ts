@@ -17,15 +17,14 @@ export class ListComponent implements OnInit {
     this.books = [];
   }
   book: any;
-  ngOnInit(): void {
-    this.bookService.getBooks('1984').then((books: DataSet) => {
-      this.dataBooks = books;
+  ngOnInit(): void {}
 
+  search(searchValue: string) {
+    this.bookService.getBooks(searchValue).then((books: DataSet) => {
+      this.dataBooks = books;
       books.items.forEach((book: BookSearchInfos) => {
         this.books.push(book.volumeInfo);
       });
     });
   }
-
-  search() {}
 }

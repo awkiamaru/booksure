@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
-
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { ListComponent } from './list/list.component';
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
@@ -8,7 +8,9 @@ import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 })
 export class ContentComponent implements OnInit {
   form: FormGroup;
-  constructor(public fb: FormBuilder) {
+  searchValue: string;
+
+  constructor() {
     this.form = new FormGroup({
       search: new FormControl(),
     });
@@ -17,6 +19,6 @@ export class ContentComponent implements OnInit {
   ngOnInit(): void {}
 
   submitForm() {
-    console.log(this.form.value);
+    this.searchValue = this.form.value.search;
   }
 }

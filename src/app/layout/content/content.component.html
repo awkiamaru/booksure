@@ -6,23 +6,25 @@
   <p class="lead font-weight-light font-italic">
     Find the books you are looking for anywhere
   </p>
-  <form [formGroup]="form" (ngSubmit)="submitForm()">
-    <div class="input-group">
-      <input
-        type="text"
-        class="form-control"
-        formControlName="search"
-        placeholder="Type author, book name . . ."
-      />
-      <div class="input-group-append">
-        <button class="btn btn-secondary">
-          <i class="fa fa-search"></i>
-        </button>
-      </div>
+
+  <div class="input-group">
+    <input
+      type="text"
+      class="form-control"
+      #search
+      placeholder="Type author, book name . . ."
+    />
+    <div class="input-group-append">
+      <button
+        class="btn btn-secondary"
+        (click)="appListBooks.search(search.value)"
+      >
+        <i class="fa fa-search"></i>
+      </button>
     </div>
-  </form>
+  </div>
 </main>
 
 <div class="container my-4">
-  <app-list-books></app-list-books>
+  <app-list-books #appListBooks></app-list-books>
 </div>
