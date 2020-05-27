@@ -1,1 +1,32 @@
-<p>list works!</p>
+<div class="cover-container-card mx-auto">
+  <div class="my-2 text-left" *ngIf="dataBooks != undefined">
+    <p class="text-light">
+      About
+      <strong>{{ dataBooks.totalItems }}</strong>
+      results
+    </p>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4 mb-3" *ngFor="let book of books">
+      <div class="card text-dark">
+        <img
+          [src]="book.imageLinks.thumbnail"
+          class="card-img-top"
+          height="350"
+          alt="..."
+        />
+        <div class="card-body text-left">
+          <small
+            class="card-text text-muted d-inline-block text-truncate"
+            style="max-width: 210px;"
+            >{{ book.authors[0] }}</small
+          >
+          <p class="card-title h7 my-0">
+            {{ book.title }}
+          </p>
+          <small class="text-muted">Published: {{ book.publishedDate }}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

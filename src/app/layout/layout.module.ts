@@ -6,23 +6,16 @@ import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ListComponent } from './content/list/list.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     ContentComponent,
     FooterComponent,
     HeaderComponent,
-    ListComponent
+    ListComponent,
   ],
-  imports: [
-    CommonModule,
-    LayoutRoutingModule
-  ],
-  exports:[
-    ContentComponent,
-    HeaderComponent,
-    FooterComponent
-  ]
+  imports: [CommonModule, LayoutRoutingModule, ReactiveFormsModule],
+  exports: [ContentComponent, HeaderComponent, FooterComponent],
 })
-export class LayoutModule { }
+export class LayoutModule {}
