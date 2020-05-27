@@ -1,4 +1,7 @@
 <div class="cover-container-card mx-auto">
+  <div class="text-center">
+    <p class="lead" *ngIf="loading">Loading...</p>
+  </div>
   <div class="my-2 text-left" *ngIf="dataBooks != undefined">
     <p class="text-light">
       About
@@ -10,16 +13,21 @@
     <div class="col-12 col-md-6 col-lg-4 mb-3" *ngFor="let book of books">
       <div class="card text-dark">
         <img
-          [src]="book.imageLinks.thumbnail"
+          src="{{
+            book.imageLinks != undefined
+              ? book.imageLinks.thumbnail
+              : '../../../../assets/not-found.png'
+          }}"
           class="card-img-top"
           height="350"
           alt="..."
         />
+
         <div class="card-body text-left">
           <small
             class="card-text text-muted d-inline-block text-truncate"
             style="max-width: 210px;"
-            >{{ book.authors[0] }}</small
+            >{{ book.authors }}</small
           >
           <p class="card-title h7 my-0">
             {{ book.title }}

@@ -16,15 +16,23 @@ export class ListComponent implements OnInit {
   constructor(private bookService: BooksService) {
     this.books = [];
   }
-  book: any;
+  loading: boolean;
   ngOnInit(): void {}
 
   search(searchValue: string) {
-    this.bookService.getBooks(searchValue).then((books: DataSet) => {
-      this.dataBooks = books;
-      books.items.forEach((book: BookSearchInfos) => {
-        this.books.push(book.volumeInfo);
+    this.books = [];
+    this.dataBooks = null;
+    this.loading = true;
+    this.bookService
+      .getBooks(searchValue.split(' ').join('+'))
+      .then((books: DataSet) => {
+        this.dataBooks = books;
+        books.items.forEach((book: BookSearchInfos) => {
+          this.books.push(book.volumeInfo);
+        });
+        this.loading = false;
       });
-    });
+
+    console.log(this.books);
   }
 }
