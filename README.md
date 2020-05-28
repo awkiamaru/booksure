@@ -2,33 +2,55 @@
 
 <h4 align="center">Wellcome to Search books, find books by author name, subject or book title.</h4>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/6a17c0f6-bff9-44fa-b6fb-25e8faf26372/deploy-status)](https://app.netlify.com/sites/search-book/deploys)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) [![Netlify Status](https://api.netlify.com/api/v1/badges/6a17c0f6-bff9-44fa-b6fb-25e8faf26372/deploy-status)](https://app.netlify.com/sites/search-book/deploys)
 
 <h1 align="center">
   <img src="src/assets/git_readme.gif" width="380" height="300"> 
 </h1>
+## Getting started
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+This project was inspired by the APP IDEAS repository, in which one of the projects is a Book Finder. And to develop this web page I decided to use Angular and the Google Books API.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Introduction
 
-## Running unit tests
+Search for books anywhere, you don't need to know the name of the book, if you know the name of the author or the publisher, just type and search
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Prerequisites
 
-## Running end-to-end tests
+What you need to install to use the software locally
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- NodeJs
+- Npm or Yarn
+- Angular
 
-## Further help
+### Installation
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+What you need to run the system locally you need these commands
+
+```sh
+$ npm install
+$ npm run start
+```
+
+or if you use yarn
+
+```sh
+$ yarn install
+$ yarn start
+```
+
+
+
+## Authors
+
+- **Luis Fernando** - *Initial work* - [LuisFrag](https://github.com/LuisFrag)
+
+
+
+## License
+
+Usage is provided under the [MIT License](https://mit-license.org/). See LICENSE for the full details.
