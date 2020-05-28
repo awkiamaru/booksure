@@ -7,6 +7,7 @@
 <h1 align="center">
   <img src="src/assets/git_readme.gif" width="380" height="300"> 
 </h1>
+
 ## Getting started
 
 
