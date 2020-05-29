@@ -14,8 +14,8 @@
       <div class="card text-dark">
         <img
           src="{{
-            book.imageLinks != undefined
-              ? book.imageLinks.thumbnail
+            book.volumeInfo.imageLinks != undefined
+              ? book.volumeInfo.imageLinks.thumbnail
               : 'assets/not-found.png'
           }}"
           class="card-img-top"
@@ -27,12 +27,17 @@
           <small
             class="card-text text-muted d-inline-block text-truncate"
             style="max-width: 210px;"
-            >{{ book.authors }}</small
+            >{{ book.volumeInfo.authors }}</small
           >
           <p class="card-title h7 my-0">
-            {{ book.title }}
+            {{ book.volumeInfo.title }}
           </p>
-          <small class="text-muted">Published: {{ book.publishedDate }}</small>
+
+          <a [routerLink]="['/book', book.id]" class="stretched-link"
+            ><small class="text-muted"
+              >Published:{{ book.volumeInfo.publishedDate }}</small
+            >
+          </a>
         </div>
       </div>
     </div>

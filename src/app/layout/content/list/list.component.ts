@@ -21,18 +21,15 @@ export class ListComponent implements OnInit {
 
   search(searchValue: string) {
     this.books = [];
-    this.dataBooks = null;
     this.loading = true;
     this.bookService
       .getBooks(searchValue.split(' ').join('+'))
       .then((books: DataSet) => {
         this.dataBooks = books;
         books.items.forEach((book: BookSearchInfos) => {
-          this.books.push(book.volumeInfo);
+          this.books.push(book);
         });
         this.loading = false;
       });
-
-    console.log(this.books);
   }
 }
