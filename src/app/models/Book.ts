@@ -7,6 +7,10 @@ export class Book {
   publisher: string;
   publishedDate: string;
   description: string;
+  pageCount: string;
   averageRating: string;
   imageLinks: Image[];
+  language: string;
+  previewLink: string;
+  infoLink: string;
 }
