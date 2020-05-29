@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ListComponent } from './content/list/list.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BookComponent } from './content/book/book.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     HeaderComponent,
     ListComponent,
+    BookComponent,
   ],
   imports: [CommonModule, LayoutRoutingModule, ReactiveFormsModule],
   exports: [ContentComponent, HeaderComponent, FooterComponent],
