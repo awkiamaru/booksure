@@ -1,6 +1,8 @@
 <div class="cover-container-card mx-auto">
-  <div class="text-center">
-    <p class="lead" *ngIf="loading">Loading...</p>
+  <div class="d-flex justify-content-center" *ngIf="loading">
+    <div class="spinner-border text-light mr-2" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
   </div>
   <div class="my-2 text-left" *ngIf="dataBooks != undefined">
     <p class="text-light">
