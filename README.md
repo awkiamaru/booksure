@@ -17,7 +17,7 @@ This project was inspired by the APP IDEAS repository, in which one of the proje
 
 
 ### Introduction
-
+Many people look for books to read or buy, but sometimes they forget the name of the book but they remember the author or publisher who published the book, thinking about it I decided to develop Booksure which is an angled page that consumes the book api from google, in order to facilitate people's search for books.
 Search for books anywhere, you don't need to know the name of the book, if you know the name of the author or the publisher, just type and search
 
 ### Prerequisites
