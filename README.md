@@ -10,14 +10,11 @@
 
 ## Getting started
 
-
-
 This project was inspired by the APP IDEAS repository, in which one of the projects is a Book Finder. And to develop this web page I decided to use Angular and the Google Books API.
-
-
 
 ### Introduction
 
+Many people look for books to read or buy, but sometimes forget the name of the book, but remember the author or editor who published the book, thinking about it, I decided to develop Booksure, a website made in Angular that consumes the Google books API, making it easier for people to search for books, and learning more Angular concepts.
 Search for books anywhere, you don't need to know the name of the book, if you know the name of the author or the publisher, just type and search
 
 ### Prerequisites
@@ -44,13 +41,9 @@ $ yarn install
 $ yarn start
 ```
 
-
-
 ## Authors
 
-- **Luis Fernando** - *Initial work* - [LuisFrag](https://github.com/LuisFrag)
-
-
+- **Luis Fernando** - _Initial work_ - [LuisFrag](https://github.com/LuisFrag)
 
 ## License
 
