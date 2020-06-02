@@ -24,10 +24,37 @@ a:hover {
  * Base structure
  */
 
+@font-face {
+  font-family: "Comfoorta-Regular";
+  src: url(assets/fonts/Comfortaa-Regular.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: "Comfoorta-Bold";
+  src: url(assets/fonts/Comfortaa-Bold.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: "Comfoorta-Light";
+  src: url(assets/fonts/Comfortaa-Light.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: "Comfoorta-Medium";
+  src: url(assets/fonts/Comfortaa-Medium.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: "Comfoorta-SemiBold";
+  src: url(assets/fonts/Comfortaa-SemiBold.ttf) format("opentype");
+}
+
 html,
 body {
   height: 100%;
   background-color: rgb(239, 242, 241);
+  font-family: "Comfoorta-regular";
+  font-size: 0.9em;
 }
 
 .body-style {
