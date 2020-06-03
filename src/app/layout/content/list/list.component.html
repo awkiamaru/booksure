@@ -6,8 +6,11 @@
 </div>
 
 <div class="row">
-  <div class="col-12 text-left" *ngIf="dataBooks != undefined">
-    <p class="text-card-text">
+  <div class="col-12 text-left">
+    <p
+      class="text-card-text"
+      *ngIf="dataBooks != undefined || dataBooks != null"
+    >
       About <strong>{{ dataBooks.totalItems }}</strong> books found
     </p>
   </div>
