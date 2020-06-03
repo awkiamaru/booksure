@@ -6,6 +6,9 @@
   color: #89c6ff;
   font-size: 2em;
 }
+.text-logo:hover {
+  color: #6aabe7;
+}
 .bg-nav-bar {
   background-color: rgb(239, 242, 241);
 }

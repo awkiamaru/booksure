@@ -9,7 +9,7 @@ export class Book {
   description: string;
   pageCount: string;
   averageRating: string;
-  imageLinks: Image[];
+  imageLinks: Image;
   language: string;
   previewLink: string;
   infoLink: string;

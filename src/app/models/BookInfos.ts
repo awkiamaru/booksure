@@ -7,4 +7,10 @@ export class BookSearchInfos {
   volumeInfo: Book;
   saleInfo: SaleBookInfo;
   accessInfo: BookAccessInfo;
+  constructor() {
+    this.id = null;
+    this.volumeInfo = null;
+    this.saleInfo = null;
+    this.accessInfo = null;
+  }
 }

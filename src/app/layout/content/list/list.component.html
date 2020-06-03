@@ -18,10 +18,11 @@
           <img
             src="{{
               book.volumeInfo.imageLinks != undefined
-                ? book.volumeInfo.imageLinks.thumbnail
+                ? book.volumeInfo.imageLinks.smallThumbnail
                 : 'assets/img/not-found.png'
             }}"
             class="card-img"
+            height="250"
           />
         </div>
         <div class="col-sm-7 text-left">
