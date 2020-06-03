@@ -1,47 +1,80 @@
-<div class="cover-container-card mx-auto">
-  <div class="d-flex justify-content-center" *ngIf="loading">
-    <div class="spinner-border text-light mr-2" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-  </div>
-  <div class="my-2 text-left" *ngIf="dataBooks != undefined">
-    <p class="text-light">
-      About
-      <strong>{{ dataBooks.totalItems }}</strong>
-      results
+<div class="text-center" *ngIf="!isSearch">
+  <img src="assets/svg/search.svg" class="img-fluid" />
+</div>
+<div class="text-center" *ngIf="loading">
+  <img src="assets/svg/searching.svg" class="img-fluid" />
+</div>
+
+<div class="row">
+  <div class="col-12 text-left" *ngIf="dataBooks != undefined">
+    <p class="text-card-text">
+      About <strong>{{ dataBooks.totalItems }}</strong> books found
     </p>
   </div>
-  <div class="row">
-    <div class="col-12 col-md-6 col-lg-4 mb-3" *ngFor="let book of books">
-      <div class="card text-dark">
-        <img
-          src="{{
-            book.volumeInfo.imageLinks != undefined
-              ? book.volumeInfo.imageLinks.thumbnail
-              : 'assets/not-found.png'
-          }}"
-          class="card-img-top"
-          height="350"
-          alt="..."
-        />
-
-        <div class="card-body text-left">
-          <small
-            class="card-text text-muted d-inline-block text-truncate"
-            style="max-width: 210px;"
-            >{{ book.volumeInfo.authors }}</small
-          >
-          <p class="card-title h7 my-0">
-            {{ book.volumeInfo.title }}
-          </p>
-
-          <a [routerLink]="['/book', book.id]" class="stretched-link"
-            ><small class="text-muted"
-              >Published:{{ book.volumeInfo.publishedDate }}</small
-            >
-          </a>
+  <div class="col-12 col-md-4 col-lg-4 mb-3" *ngFor="let book of books">
+    <div class="card">
+      <div class="row no-gutters">
+        <div class="col-sm-5">
+          <img
+            src="{{
+              book.volumeInfo.imageLinks != undefined
+                ? book.volumeInfo.imageLinks.thumbnail
+                : 'assets/img/not-found.png'
+            }}"
+            class="card-img"
+          />
+        </div>
+        <div class="col-sm-7 text-left">
+          <div class="card-body">
+            <h5 class="text-card-title">{{ book.volumeInfo.title }}</h5>
+            <p class="text-card-text my-2">
+              <span class="text-card-title">Authors:</span>
+              {{ book.volumeInfo.authors }}
+            </p>
+            <p class="text-card-text my-2">
+              <span class="text-card-title">Published Date:</span>
+              {{ book.volumeInfo.publishedDate }}
+            </p>
+            <p class="text-card-text my-2">
+              <span class="text-card-title">Publisher:</span>
+              {{ book.volumeInfo.publisher }}
+            </p>
+            <a
+              [routerLink]="['/search/book/', book.id]"
+              class="stretched-link btn btn-primary btn-sm card-button-text btn-card"
+              >More
+              <fa-icon [icon]="faArrowRight" size="xs"></fa-icon>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<!--       <img
+        src="{{
+          book.volumeInfo.imageLinks != undefined
+            ? book.volumeInfo.imageLinks.thumbnail
+            : 'assets/img/not-found.png'
+        }}"
+        class="card-img-top"
+        height="280"
+        alt="..."
+      />
+
+      <div class="card-body text-left">
+        <small
+          class="card-text text-muted d-inline-block text-truncate"
+          style="max-width: 210px;"
+          >{{ book.volumeInfo.authors }}</small
+        >
+        <p class="card-title h7 my-0">
+          {{ book.volumeInfo.title }}
+        </p>
+
+        <a [routerLink]="['/search/book/', book.id]" class="stretched-link"
+          ><small class="text-muted"
+            >Published:{{ book.volumeInfo.publishedDate }}</small
+          >
+        </a>
+      </div>-->

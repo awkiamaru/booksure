@@ -48,12 +48,23 @@ a:hover {
   src: url(assets/fonts/Comfortaa-SemiBold.ttf) format("opentype");
 }
 
-html,
-body {
+html {
   height: 100%;
+}
+body {
+  min-height: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
   background-color: rgb(239, 242, 241);
   font-family: "Comfoorta-regular";
   font-size: 0.9em;
+}
+
+body::after {
+  content: "";
+  display: block;
+  height: 50px; /* Set same as footer's height */
 }
 .text-logo {
   font-family: "Comfoorta-bold";
