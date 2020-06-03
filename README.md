@@ -1,4 +1,4 @@
-![SEARCH BOOKS](https://raw.githubusercontent.com/LuisFrag/search-books/master/src/assets/logo_transparent.png)
+![SEARCH BOOKS](https://raw.githubusercontent.com/LuisFrag/booksure/master/src/assets/img/logo_transparent.png)
 
 <h4 align="center">Wellcome to Search books, find books by author name, subject or book title.</h4>
 
