@@ -1,0 +1,29 @@
+.text-home-apresentation,
+.text-home-apresentation-blue {
+  font-family: "Comfoorta-Bold";
+  font-size: 3rem;
+  color: #403e3e;
+}
+.text-home-apresentation-blue {
+  color: #89c6ff;
+}
+
+.text-home-secondary {
+  font-family: "Comfoorta-Light";
+  font-size: 1rem;
+  color: #403e3e;
+}
+.btn-home-apresentation {
+  padding: 0.7rem 4rem 0.7rem 3rem;
+  background-color: #62add7;
+  border-color: #62add7;
+  font-size: 0.8rem;
+}
+.btn-home-apresentation:hover {
+  color: #fff;
+  background-color: #5397be;
+  border-color: #5397be;
+}
+.bg-home-blue {
+  background-color: #a2d2ff;
+}

@@ -1,0 +1,75 @@
+<app-header></app-header>
+<div class="container pb-20">
+  <div class="row">
+    <div class="col-12 col-md-12 col-lg-4">
+      <div class="card card-book">
+        <div class="card-body">
+          <div class="text-center">
+            <p class="text-title">{{ book.volumeInfo.title }}</p>
+            <img
+              src="{{
+                book.volumeInfo.imageLinks != undefined
+                  ? book.volumeInfo.imageLinks.thumbnail
+                  : 'assets/img/not-found.png'
+              }}"
+              class="img-fluid"
+            />
+          </div>
+
+          <div class="text-left mt-5">
+            <p class="text-card-text">
+              <span class="text-card-title">Authors:</span>
+              {{ book.volumeInfo.authors }}
+            </p>
+            <p class="text-card-text">
+              <span class="text-card-title">Publisher:</span>
+              {{ book.volumeInfo.publisher }}
+            </p>
+            <p class="text-card-text">
+              <span class="text-card-title">Published Date:</span
+              >{{ book.volumeInfo.publishedDate }}
+            </p>
+            <p class="text-card-text">
+              <span class="text-card-title">Number of pages:</span>
+              {{ book.volumeInfo.pageCount }} pages
+            </p>
+            <p class="text-card-text">
+              <span class="text-card-title">Critics' Opinion:</span>
+              <fa-icon [icon]="faStar" class="text-blue"></fa-icon>
+              {{ book.volumeInfo.averageRating }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-12 col-lg-8">
+      <div class="card card-book">
+        <div class="card-body">
+          <div class="text-left mb-5">
+            <p class="h5">Book Description</p>
+          </div>
+          <div class="text-left">
+            <p class="text-card-text">
+              {{ book.volumeInfo.description }}
+            </p>
+          </div>
+          <div class="row">
+            <div class="col-12 text-right">
+              <a
+                href="{{ book.accessInfo.webReaderLink }}"
+                class="btn btn-primary mx-2 card-button-text"
+                >Read a sample</a
+              >
+              <a
+                href="{{ book.saleInfo.buyLink }}"
+                class="btn btn-primary card-button-text"
+                >Buy this book</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
