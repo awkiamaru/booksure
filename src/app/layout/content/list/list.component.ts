@@ -24,6 +24,7 @@ export class ListComponent implements OnInit {
     this.books = [];
     this.loading = true;
     this.isSearch = true;
+    this.dataBooks = null;
     this.bookService
       .getBooks(searchValue.split(' ').join('+'))
       .then((books: DataSet) => {
