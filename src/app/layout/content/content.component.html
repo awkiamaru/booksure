@@ -1,27 +1,37 @@
-<main role="main" class="inner cover cover-container mx-auto">
-  <img src="assets/search_book_light_transparent.png" class="img-fluid" />
-  <p class="lead font-weight-light font-italic">
-    Find the books you are looking for anywhere
-  </p>
-
-  <div class="input-group">
-    <input
-      type="text"
-      class="form-control"
-      #search
-      placeholder="Type author, book name . . ."
-    />
-    <div class="input-group-append">
-      <button
-        class="btn btn-secondary"
-        (click)="appListBooks.search(search.value)"
-      >
-        <i class="fa fa-search"></i>
-      </button>
+<div class="container pb-20">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <p class="font-weight-light text-home-secondary text-center text-md-left">
+        You don't need to know the name of the book, if you know the name of the
+        author or publisher, just type, search and find
+      </p>
+    </div>
+    <div class="col-6 my-30"></div>
+    <div class="col-12 col-md-8 mx-auto py-5">
+      <div class="input-group mt-4">
+        <input
+          type="text"
+          class="form-control search-bar"
+          #search
+          placeholder="Type author, book name . . ."
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-secondary btn-search"
+            (click)="appListBooks.search(search.value)"
+          >
+            <img
+              src="assets/svg/search-icon.svg"
+              alt=""
+              height="22"
+              width="22"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 pt-5 text-center">
+      <app-list-books #appListBooks></app-list-books>
     </div>
   </div>
-</main>
-
-<div class="container my-4">
-  <app-list-books #appListBooks></app-list-books>
 </div>

@@ -1,7 +1,28 @@
-.cover-container-card {
-    max-width: 50em;
-  }
-  .h7{
-      font-size: 0.9em;
-      
-  }
+.bcontent {
+  margin-top: 10px;
+}
+.text-card-title {
+  font-size: 0.8rem;
+  font-family: "Comfoorta-Bold";
+}
+
+.text-card-text,
+.card-button-text {
+  font-size: 0.7rem;
+  color: #403e3e;
+  font-family: "Comfoorta-Light";
+}
+.card-button-text {
+  color: #ffffff;
+}
+
+.btn-card {
+  background-color: #62add7;
+  border-color: #62add7;
+  font-size: 0.8rem;
+}
+.btn-card:hover {
+  color: #fff;
+  background-color: #5397be;
+  border-color: #5397be;
+}

@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BooksService } from 'src/app/services/books.service';
 import { DataSet } from 'src/app/models/DataSet';
-import { Book } from 'src/app/models/Book';
 import { BookSearchInfos } from 'src/app/models/BookInfos';
-
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-list-books',
   templateUrl: './list.component.html',
@@ -12,27 +11,27 @@ import { BookSearchInfos } from 'src/app/models/BookInfos';
 export class ListComponent implements OnInit {
   public dataBooks: DataSet;
   public books;
-
+  faArrowRight = faChevronRight;
   constructor(private bookService: BooksService) {
     this.books = [];
   }
   loading: boolean;
+  isSearch: boolean;
+
   ngOnInit(): void {}
 
   search(searchValue: string) {
     this.books = [];
-    this.dataBooks = null;
     this.loading = true;
+    this.isSearch = true;
     this.bookService
       .getBooks(searchValue.split(' ').join('+'))
       .then((books: DataSet) => {
         this.dataBooks = books;
         books.items.forEach((book: BookSearchInfos) => {
-          this.books.push(book.volumeInfo);
+          this.books.push(book);
         });
         this.loading = false;
       });
-
-    console.log(this.books);
   }
 }
