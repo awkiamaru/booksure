@@ -16,11 +16,10 @@ export class BooksService {
       .get<BookSearchInfos>(`${environment.url}/volumes/${id}`)
       .pipe(retry(2), catchError(this.handleError));
   }
-  public getBooks(query: string): Promise<DataSet> {
+  public getBooks(query: string): Observable<DataSet> {
     return this.http
-      .get(`${environment.url}/volumes?q=${query}&maxResults=12`)
-      .toPromise()
-      .then((response: any) => response);
+      .get<DataSet>(`${environment.url}/volumes?q=${query}&maxResults=12`)
+      .pipe(retry(2), catchError(this.handleError));
   }
 
   handleError(error: HttpErrorResponse) {
