@@ -27,7 +27,7 @@ export class ListComponent implements OnInit {
     this.dataBooks = null;
     this.bookService
       .getBooks(searchValue.split(' ').join('+'))
-      .then((books: DataSet) => {
+      .subscribe((books: DataSet) => {
         this.dataBooks = books;
         books.items.forEach((book: BookSearchInfos) => {
           this.books.push(book);
